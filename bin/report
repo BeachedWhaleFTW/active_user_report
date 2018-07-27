@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+require_relative '../lib/report.rb'
+
+input_array = ARGV
+
+if input_array.length != 2
+	abort("Need exactly 2 inputs")
+end
+
+directory = "./reports/"
+
+filename1 = input_array[0]
+puts "Imported #{filename1} as 'Active Users List'"
+filename2 = input_array[1]
+puts "Imported #{filename2} as 'Login List'"
+
+path1 = directory + filename1
+path2 = directory + filename2
+
+args = {"filename1" => path1,
+	"filename2" => path2}
+
+report = Report.new(args)
+report.execute
+report.export
+
+exit(0)

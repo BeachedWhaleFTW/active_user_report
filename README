@@ -1,0 +1,8 @@
+To use:
+	1) open terminal to the "active_user_report" directory
+	2) type "ruby ./bin/report active_user.csv login.csv"
+		2a) "active_user.csv" and "login.csv" can be named whatever you want, they just reference the appropriate sheet
+		2b) the "active_user.csv" needs to be listed before "login.csv"
+		2c) ensure the files have the ".csv" extension
+	3) visually confirm the sheets were entered correctly via the terminal output
+	4) report should be placed in ./reports/ directory as displayed in terminal output
